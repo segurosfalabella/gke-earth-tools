@@ -1,0 +1,24 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: certbot-boostrap
+  namespace: kube-system
+spec:
+  schedule: "* * 1 1/3 *"
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          name: certbot-boostrap
+        spec:
+          containers:
+            - image: gcr.io/[GCP_PROJECT_ID]/certboot-bootstrap
+              name: certbot-bootstrap
+              env:
+                - name: DOMAIN
+                  value: [DOMAIN]
+                - name: EMAIL
+                  value: [ACME_EMAIL]
+                - name: KONG_ADDR
+                  value: kong-ingress-controller:8001
+          restartPolicy: Never

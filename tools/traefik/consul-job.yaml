@@ -1,0 +1,31 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: traefik-boostrap
+  namespace: kube-system
+spec:
+  template:
+    metadata:
+      name: traefik-boostrap
+    spec:
+      containers:
+        - image: traefik:1.6.5
+          name: traefik-bootstrap
+          args:
+            - storeconfig
+            - '--configfile=/config/traefik.toml'
+          volumeMounts:
+            - name: traefik-config
+              mountPath: /etc/traefik
+          env:
+            - name: CONSUL_HTTP_TOKEN
+              value: [CONSUL_HTTP_TOKEN]
+            - name: CLOUDFLARE_EMAIL
+              value: [CLOUDFLARE_EMAIL]
+            - name: CLOUDFLARE_API_KEY
+              value: [CLOUDFLARE_API_KEY]
+      restartPolicy: Never
+      volumes:
+        - name: traefik-config
+          configMap:
+            name: traefik-config

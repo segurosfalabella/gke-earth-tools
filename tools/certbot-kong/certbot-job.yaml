@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: certbot-boostrap
+  namespace: kube-system
+spec:
+  template:
+    metadata:
+      name: certbot-boostrap
+    spec:
+      containers:
+        - image: gcr.io/[GCP_PROJECT_ID]/certbot-bootstrap
+          name: certbot-bootstrap
+          env:
+            - name: DOMAIN
+              value: [DOMAIN]
+            - name: EMAIL
+              value: [ACME_EMAIL]
+            - name: KONG_ADDR
+              value: kong-ingress-controller:8001
+      restartPolicy: Never

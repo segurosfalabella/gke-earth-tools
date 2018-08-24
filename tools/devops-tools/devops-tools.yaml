@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: devops-tools
+  namespace: kube-system
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devops-tools
+  template:
+    metadata:
+      labels:
+        app: devops-tools
+    spec:
+      containers:
+      - name: devops-tools
+        image: gcr.io/[GCP_PROJECT_ID]/devops-tools
+        resources:
+          limits:
+            cpu: 200m
+            memory: 30Mi
+          requests:
+            cpu: 100m
+            memory: 20Mi
