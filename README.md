@@ -1,6 +1,6 @@
 # Kubernetes Deployment on Google GKE Service
 
-This repo contains a GKE deployment using Terraform, and the following tools:
+This repo contains a GKE deployment using Terraform, with the following tools:
 
 1. Consul
 2. Traefik
