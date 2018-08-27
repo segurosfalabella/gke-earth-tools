@@ -41,7 +41,7 @@ data:
       dialTimeout = "10s"
 
     [acme]
-      email = "[EMAIL]"
+      email = "REPLACE-WITH-EMAIL"
       storage = "traefik/acme/account"
       entryPoint = "https"
       onDemand = true
@@ -51,4 +51,4 @@ data:
         provider = "cloudflare"
         delayBeforeCheck = 0
       [[acme.domains]]
-        main = "*.[DOMAIN]"
+        main = "*.REPLACE-WITH-DOMAIN"

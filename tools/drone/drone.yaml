@@ -17,7 +17,7 @@ data:
   #######################
 
   # server host name
-  server.host: https://drone.[DOMAIN]
+  server.host: https://drone.REPLACE-WITH-DOMAIN
   # start the server in debug mode
   server.debug: "true"
   # open user registration
@@ -31,8 +31,8 @@ data:
 
   # remote parameters (GitHub)
   server.remote.github: "true"
-  server.remote.github.client: [CLIENT]
-  server.remote.github.secret: [SECRET]
+  server.remote.github.client: REPLACE-WITH-CLIENT
+  server.remote.github.secret: REPLACE-WITH-SECRET
 
   ######################
   # Drone Agent Config #
@@ -196,7 +196,7 @@ metadata:
     kubernetes.io/ingress.class: traefik
 spec:
   rules:
-  - host: drone.[DOMAIN]
+  - host: drone.REPLACE-WITH-DOMAIN
     http:
       paths:
       - backend:

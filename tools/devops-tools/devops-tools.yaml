@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: devops-tools
-        image: gcr.io/[GCP_PROJECT_ID]/devops-tools
+        image: gcr.io/GCP-PROJECT-ID/devops-tools
         resources:
           limits:
             cpu: 200m

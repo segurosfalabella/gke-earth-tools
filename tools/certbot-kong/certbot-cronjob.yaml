@@ -12,13 +12,13 @@ spec:
           name: certbot-boostrap
         spec:
           containers:
-            - image: gcr.io/[GCP_PROJECT_ID]/certboot-bootstrap
+            - image: gcr.io/GCP-PROJECT-ID/certboot-bootstrap
               name: certbot-bootstrap
               env:
                 - name: DOMAIN
-                  value: [DOMAIN]
+                  value: REPLACE-WITH-DOMAIN
                 - name: EMAIL
-                  value: [ACME_EMAIL]
+                  value: REPLACE-WITH-EMAIL
                 - name: KONG_ADDR
                   value: kong-ingress-controller:8001
           restartPolicy: Never

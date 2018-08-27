@@ -90,11 +90,11 @@ spec:
           - --logLevel=DEBUG
         env:
           - name: CONSUL_HTTP_TOKEN
-            value: c5da34ec-cf31-2b8c-2b77-13fcd0c5ab21
+            value: REPLACE-WITH-CONSUL-HTTP-TOKEN
           - name: CLOUDFLARE_EMAIL
-            value: maxx.damage@gmail.com
+            value: REPLACE-WITH-CLOUDFLARE-EMAIL
           - name: CLOUDFLARE_API_KEY
-            value: 1144be05c741fe4814a960ce7d0aa790a4da6
+            value: REPLACE-WITH-CLOUDFLARE-API-KEY
 
 ---
 
@@ -141,7 +141,7 @@ metadata:
     kubernetes.io/ingress.class: traefik
 spec:
     rules:
-      - host: traefik.[DOMAIN]
+      - host: traefik.REPLACE-WITH-DOMAIN
         http:
           paths:
             - backend:

@@ -72,7 +72,7 @@ metadata:
     kubernetes.io/ingress.class: traefik
 spec:
   rules:
-  - host: grafana.[DOMAIN]
+  - host: grafana.REPLACE-WITH-DOMAIN
     http:
       paths:
       - backend:

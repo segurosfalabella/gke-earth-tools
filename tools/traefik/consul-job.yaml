@@ -19,11 +19,11 @@ spec:
               mountPath: /etc/traefik
           env:
             - name: CONSUL_HTTP_TOKEN
-              value: [CONSUL_HTTP_TOKEN]
+              value: REPLACE-WITH-CONSUL-HTTP-TOKEN
             - name: CLOUDFLARE_EMAIL
-              value: [CLOUDFLARE_EMAIL]
+              value: REPLACE-WITH-CLOUDFLARE-EMAIL
             - name: CLOUDFLARE_API_KEY
-              value: [CLOUDFLARE_API_KEY]
+              value: REPLACE-WITH-CLOUDFLARE-API-KEY
       restartPolicy: Never
       volumes:
         - name: traefik-config

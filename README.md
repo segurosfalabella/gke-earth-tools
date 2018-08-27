@@ -11,4 +11,3 @@ This repo contains a GKE or AKS deployment using Terraform, with the following t
 7. Grafana
 8. Weave-Scope
 9. Devops Tools
-

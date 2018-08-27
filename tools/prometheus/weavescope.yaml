@@ -152,7 +152,7 @@ items:
         kubernetes.io/ingress.class: traefik
     spec:
       rules:
-      - host: weavescope.[DOMAIN]
+      - host: weavescope.REPLACE-WITH-DOMAIN
         http:
           paths:
           - backend:

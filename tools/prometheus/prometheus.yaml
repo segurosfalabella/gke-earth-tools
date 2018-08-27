@@ -242,7 +242,7 @@ metadata:
     kubernetes.io/ingress.class: traefik
 spec:
   rules:
-  - host: prometheus.[DOMAIN]
+  - host: prometheus.REPLACE-WITH-DOMAIN
     http:
       paths:
       - backend:

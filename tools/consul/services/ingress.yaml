@@ -28,7 +28,7 @@ metadata:
     kubernetes.io/ingress.class: traefik
 spec:
     rules:
-      - host: consul.[DOMAIN]
+      - host: consul.REPLACE-WITH-DOMAIN
         http:
           paths:
             - backend:
