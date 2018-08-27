@@ -1,6 +1,6 @@
 # Kubernetes Deployment on Google GKE Service
 
-This repo contains a GKE deployment using Terraform, with the following tools:
+This repo contains a GKE or AKS deployment using Terraform, with the following tools:
 
 1. Consul
 2. Traefik
@@ -12,4 +12,3 @@ This repo contains a GKE deployment using Terraform, with the following tools:
 8. Weave-Scope
 9. Devops Tools
 
-They need to be deployed in that order.
