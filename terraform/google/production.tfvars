@@ -14,6 +14,6 @@ machine_type = "n1-standard-1"
 
 disk_type = "pd-ssd"
 
-remote_user = "max.g"
+remote_user = "[REMOTE_USER]"
 
-remote_pass = "[PASSWORD]"
+remote_pass = "[REMOTE_PASSWORD]"
