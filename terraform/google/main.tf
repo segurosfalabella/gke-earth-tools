@@ -1,5 +1,6 @@
 resource "google_container_cluster" "tools" {
   name               = "${var.cluster_name}-${var.environment}"
+  project            = "${var.project}"
   zone               = "${var.zone}"
   initial_node_count = "${var.node_count}"
   min_master_version = "${var.min_master_ver}"
